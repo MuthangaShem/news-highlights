@@ -27,6 +27,20 @@ class ArticleTest(unittest.TestCase):
         '''
         self.assertTrue(isinstance(self.new_article, Articles))
 
+    def test_init(self):
+        '''
+        Test case to check if the Article class is initialised
+        '''
+        self.assertEqual(self.new_article.author, 'CNN News')
+        self.assertEqual(self.new_article.title,
+                         'Obama set to visit Kenya')
+        self.assertEqual(self.new_article.description,
+                         'Kenya will host Potus on the 3rd to 5th of November this year ')
+        self.assertEqual(self.new_article.urlToImage,
+                         'https://ichef.cnnmobile.com/news/1024/cpsprodpb/F046/production/_98901516_2efffed4-d4a6-486a-8a78-112232b92faa.jpg')
+        self.assertEqual(self.new_article.url,
+                         'http://www.cnn.com/news/world-us-42420150')
+        self.assertEqual(self.new_article.publishedAt, '2018-10-05T09:14:56Z')
 
 
 
