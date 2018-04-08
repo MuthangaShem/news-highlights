@@ -1,0 +1,16 @@
+{% macro displaySourcesList(sources) %}
+        {% for source in sources %}
+          <div class=" col-md-3">
+            <a href='/articles/{{source.id}}'>
+              <h3 style="font-weight:bold">{{ source.name}}</h3>
+            </a>
+            <h5 style="color:#ff5900;">{{source.category.upper()}}</h5>
+
+            <div class="well" style="height:100px; background-color:lightblue;">
+                <p style="font-weight:bold">{{ source.description|truncate(150)}}</p>
+            </div>
+
+          </div>
+
+        {% endfor %}
+{% endmacro %}
