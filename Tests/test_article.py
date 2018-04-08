@@ -42,6 +42,13 @@ class ArticleTest(unittest.TestCase):
                          'http://www.cnn.com/news/world-us-42420150')
         self.assertEqual(self.new_article.publishedAt, '2018-10-05T09:14:56Z')
 
+    def test_publish_date_format(self):
+        '''
+        Test case to check if UTC date format is converted to a display-friendly format
+        '''
+        display_friendly_format = self.new_article.publish_date_format(
+            self.new_article.publishedAt)
+        self.assertEqual(display_friendly_format, '2017-12-20')
 
 
 if __name__ == '__main__':
