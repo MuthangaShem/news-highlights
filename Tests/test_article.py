@@ -21,6 +21,12 @@ class ArticleTest(unittest.TestCase):
                                     'http://www.cnn.com/news/world-us-42420150',
                                     '2018-10-05T09:14:56Z')
 
+    def test_instance(self):
+        '''
+        Test case to check if self.new_article is an instance of Article
+        '''
+        self.assertTrue(isinstance(self.new_article, Articles))
+
 
 
 
